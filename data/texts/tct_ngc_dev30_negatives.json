@@ -1,0 +1,20 @@
+{
+  "_comment": "SINGLE SOURCE OF TRUTH for TCT_NGC dev30 negative/background classes excluded from detection (base) mAP. These are non-diagnostic / benign categories that are NOT detection targets. EDIT ONLY HERE -- the two ochmta_m1 configs read this file directly (json.load), and the eval scripts read it via wedetect.utils.load_dev30_negative_classes. tools/clinical_cost_config_dev30.json tiers.L0_negative must mirror this list (verified by tools/check_negative_class_consistency.py).",
+  "split": "dev30",
+  "negative_class_names": [
+    "respiratory tract-Impurity",
+    "Serous effusion-Negative samples",
+    "Thyroid gland-NS",
+    "Thyroid gland-Negative samples",
+    "Urine-NHGUC",
+    "TCT_CCD-normal"
+  ],
+  "rationale": {
+    "respiratory tract-Impurity": "PSC I Nondiagnostic -- contaminant/debris",
+    "Serous effusion-Negative samples": "TIS II NFM -- negative for malignancy",
+    "Thyroid gland-NS": "Bethesda I Nondiagnostic -- scant follicular cells; added 2026-06-09 (previously omitted, so it was wrongly counted in the Thyroid organ base mAP)",
+    "Thyroid gland-Negative samples": "Bethesda II Benign -- follicular nodular disease",
+    "Urine-NHGUC": "Paris II NHGUC -- negative for high-grade urothelial carcinoma",
+    "TCT_CCD-normal": "Bethesda NILM -- negative for intraepithelial lesion or malignancy"
+  }
+}

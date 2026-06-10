@@ -1,0 +1,149 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Environment
+.env
+.env.*
+!.env.example
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Model checkpoints (large pretrained weights)
+checkpoints/
+*.onnx
+*.bin
+*.safetensors
+
+# Work directories (training outputs, ~50GB)
+work_dirs/
+work_dirs_old/
+bibm2026/
+
+# Dataset (raw patient data — never commit)
+# Use data/* + negate pattern to allow re-including data/texts/
+data/*
+# Allow text prompt JSONs + derived embedding caches (no PHI, needed for paper reproduction)
+!data/texts/
+
+# Block any .pth/.pt model weights anywhere EXCEPT data/texts/ (those are small derived caches)
+*.pt
+# ...but re-include data/texts/*.pt (the blanket *.pt above overrides the !data/texts/ dir
+# negation for .pt; .pth doesn't need this since there's no blanket *.pth). These are tiny
+# derived caches (organ masks, class metadata <=0.5MB) that training/eval HARD-depend on, so
+# a fresh `git clone` must carry them. [2026-06-10]
+!data/texts/*.pt
+!data/texts/**/*.pt
+# global *.pth excluded so checkpoints/ catches model files; data/texts/.pth is allowed by negation
+**/checkpoint_*.pth
+**/epoch_*.pth
+**/best_*.pth
+**/last.pth
+
+# XLM-Roberta model files
+xlm-roberta-base/
+
+# Logs
+*.log
+logs/
+
+# Local experiment docs / paper notes (do not publish)
+docs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Stray markers from external tools
+.codex
+
+# Local git-history backups (e.g. .git.backup-YYYYMMDD_HHMMSS/) — keep them
+# on disk for recovery but never commit them; the real .git/ is authoritative.
+.git.backup-*/
+
+# Claude Code agent state and local IDE config
+.claude/
+
+# Claude Code project instructions (contain dev environment paths)
+CLAUDE.md
+AGENTS.md
+
+# Paper drafts — contain author identity (BibM double-blind review)
+paper/
+
+# Internal planning notes + archived dead-end code (kept on disk, not for the public repo)
+TODO.md
+legacy/
+*.disabled
+
+# Internal data-UPLOAD tooling (has personal absolute paths; collaborators only ever use the
+# DOWNLOAD path tools/fetch_dataset.sh -> scripts/download_*.sh, which is committed).
+scripts/upload_*modelscope*.sh

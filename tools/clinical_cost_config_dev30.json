@@ -1,0 +1,55 @@
+{
+  "version": "dev30_v1",
+  "description": "TCT_NGC dev30 (Urine 3 negatives merged → Urine-NHGUC). Class severity tiers + cost matrix rules. Mirrors dev32 schema except Urine block has 1 negative class instead of 3.",
+  "tiers": {
+    "L0_negative": [
+      "respiratory tract-Impurity",
+      "Serous effusion-Negative samples",
+      "Thyroid gland-NS",
+      "Thyroid gland-Negative samples",
+      "Urine-NHGUC",
+      "TCT_CCD-normal"
+    ],
+    "L1_atypical": [
+      "Thyroid gland-AUC",
+      "Urine-AUC",
+      "TCT_CCD-ascus",
+      "TCT_CCD-ec"
+    ],
+    "L2_suspicious": [
+      "Urine-SHGUC",
+      "TCT_CCD-asch"
+    ],
+    "L3_malignant": [
+      "respiratory tract-Diseased cells",
+      "Serous effusion-Diseased cells",
+      "Thyroid gland-PTC",
+      "Thyroid gland-SPTC",
+      "Thyroid gland-Macrophages",
+      "Thyroid gland-FC",
+      "Urine-HGUC",
+      "TCT_CCD-lsil",
+      "TCT_CCD-hsil_scc_omn",
+      "TCT_CCD-agc_adenocarcinoma_em",
+      "TCT_CCD-vaginalis",
+      "TCT_CCD-monilia",
+      "TCT_CCD-dysbacteriosis_herpes_act"
+    ],
+    "ignored": [
+      "respiratory tract-Neutrophil",
+      "respiratory tract-Alveolar macrophages",
+      "respiratory tract-Ciliated columnar epithelial cells",
+      "respiratory tract-Lymphocyte",
+      "respiratory tract-Squamous epithelial cells"
+    ]
+  },
+  "cost_matrix_rule": {
+    "L0_to_Lk_pos": "k",
+    "Lk_pos_to_L0": "10 * k",
+    "Lj_pos_to_Lk_pos": "abs(j - k)",
+    "miss_no_detection": "same_as_L0_pred",
+    "fp_no_gt_to_Lk_pos": "k",
+    "fp_no_gt_to_L0": "0"
+  },
+  "cost_matrix_rule_doc": "Same convention as dev32_v1 cost config: severity indices L0=0, L1=1, L2=2, L3=3. Multiplier 10 for false negatives encodes the clinical-conservative bias. Ignored classes are filtered before matching."
+}

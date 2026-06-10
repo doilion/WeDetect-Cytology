@@ -1,0 +1,392 @@
+[
+  {
+    "category": "respiratory tract-Neutrophil (呼吸道-中性粒细胞)",
+    "source": "General cytology inflammatory cells; Papanicolaou Respiratory Cytology",
+    "cell_size_shape": "Small round leukocytes, about 10-15 µm, with scant fragile pale finely granular cytoplasm.",
+    "nuclear_size_shape": "Segmented nuclei have 2-5 lobes; each lobe approximates an RBC diameter.",
+    "nuclear_membrane_contour": "Nuclear membranes are smooth but deeply clefted by segmentation, without grooves or pseudoinclusions.",
+    "chromatin_nucleoli": "Chromatin is dense, clumped, and mature; nucleoli are inconspicuous or absent.",
+    "nc_ratio_cytoplasm": "N:C ratio is high, approximately 0.5-0.7, with scant pale finely granular cytoplasm.",
+    "architecture_arrangement": "Cells occur singly or in loose mucus-associated aggregates of dispersed multilobed inflammatory cells."
+  },
+  {
+    "category": "respiratory tract-Alveolar macrophages (呼吸道-肺泡巨噬细胞, merged with dust cells per Excel)",
+    "source": "Papanicolaou Respiratory Cytology, Chapter 2",
+    "cell_size_shape": "Large round-to-oval histiocytes, about 20-50 µm, with abundant foamy vacuolated cytoplasm; dust cells (merged subclass) contain dark carbon particulate inclusions.",
+    "nuclear_size_shape": "Eccentric oval or bean-shaped nuclei measure about 8-12 µm, small relative to cytoplasmic volume.",
+    "nuclear_membrane_contour": "Nuclear membranes are smooth, sometimes gently indented or reniform, without grooves or pseudoinclusions.",
+    "chromatin_nucleoli": "Chromatin is fine and vesicular in the pulmonary histiocyte pattern, more open than columnar epithelial chromatin; nucleoli are inconspicuous or small and single.",
+    "nc_ratio_cytoplasm": "N:C ratio is very low, typically <0.3, with abundant foamy vacuolated cytoplasm.",
+    "architecture_arrangement": "Cells are singly dispersed or in loose histiocytic clusters, not tight glandular groups."
+  },
+  {
+    "category": "respiratory tract-Ciliated columnar epithelial cells (呼吸道-纤毛柱状上皮细胞)",
+    "source": "Papanicolaou Respiratory Cytology, Chapter 2, Figure 2.2",
+    "cell_size_shape": "Columnar or cuboidal cells, about 15-30 µm tall, show delicate basophilic cytoplasm with apical cilia.",
+    "nuclear_size_shape": "Uniform oval nuclei measure about 8-12 µm and are basally oriented in columnar cells.",
+    "nuclear_membrane_contour": "Nuclear membranes are smooth and evenly contoured, without notches, grooves, or pseudoinclusions.",
+    "chromatin_nucleoli": "Chromatin is fine and bland with even dispersion; nucleoli are inconspicuous. Nuclei lack the open vesicular quality of histiocytes, retaining a slightly more compact epithelial chromatin texture.",
+    "nc_ratio_cytoplasm": "N:C ratio is low to moderate, approximately 0.3-0.5, with delicate columnar cytoplasm, terminal bars, and ciliated apical borders.",
+    "architecture_arrangement": "Cells form cohesive sheets, strips, honeycomb groups, and picket-fence palisades with aligned ciliated borders."
+  },
+  {
+    "category": "respiratory tract-Lymphocyte (呼吸道-淋巴细胞)",
+    "source": "Papanicolaou Respiratory Cytology; lymphocytic background in BAL/EBUS samples",
+    "cell_size_shape": "Small round mononuclear cells, about 7-10 µm, have only a thin basophilic cytoplasmic rim.",
+    "nuclear_size_shape": "Round uniform nuclei measure about 6-8 µm and nearly fill the cell.",
+    "nuclear_membrane_contour": "Nuclear membranes are smooth and round, without molding, grooves, or notches.",
+    "chromatin_nucleoli": "Chromatin is dense, clumped, and mature; nucleoli are absent.",
+    "nc_ratio_cytoplasm": "N:C ratio is very high, >0.8, with only a thin rim of basophilic cytoplasm.",
+    "architecture_arrangement": "Cells are singly dispersed or in loose lymphoid aggregates, lacking nuclear molding or crush artifact."
+  },
+  {
+    "category": "respiratory tract-Impurity (呼吸道-杂质, negative sample placeholder per Excel)",
+    "source": "Papanicolaou Respiratory Cytology, Chapter 2",
+    "cell_size_shape": "Sputum/bronchial-specific artifacts: mucus strands (long basophilic ropes), fibrin networks, blood clots, lubricant from instrumentation.",
+    "nuclear_size_shape": "No identifiable cellular nuclei; dark particles are precipitate or debris.",
+    "nuclear_membrane_contour": "No nuclear membrane contour present; visible edges are irregular material borders.",
+    "chromatin_nucleoli": "No chromatin pattern or nucleoli identifiable.",
+    "nc_ratio_cytoplasm": "Not applicable - material is acellular.",
+    "architecture_arrangement": "Amorphous material - mucus strands, fibrin, blood, lubricant - without cellular sheets, clusters, or single cells; per Excel schema 'not displayed, used as negative sample only'."
+  },
+  {
+    "category": "respiratory tract-Squamous epithelial cells (呼吸道-鳞状上皮细胞, oropharyngeal contamination)",
+    "source": "Papanicolaou Respiratory Cytology; oropharyngeal contamination in sputum/bronchial specimens",
+    "cell_size_shape": "Large flat polygonal cells, about 40-60 µm, have sharply bordered dense cytoplasm.",
+    "nuclear_size_shape": "Small central or pyknotic nuclei measure about 4-8 µm, markedly smaller than the cell.",
+    "nuclear_membrane_contour": "Nuclear membranes are smooth and regular, often condensed in pyknotic nuclei.",
+    "chromatin_nucleoli": "Chromatin is condensed and bland; nucleoli are absent or inconspicuous.",
+    "nc_ratio_cytoplasm": "N:C ratio is very low, <0.1, with abundant cyanophilic, eosinophilic, or orangeophilic cytoplasm.",
+    "architecture_arrangement": "Cells appear as flat sheets or isolated polygonal elements with crisp cytoplasmic borders."
+  },
+  {
+    "category": "respiratory tract-Diseased cells (呼吸道-病变细胞, PSC Category III Atypical)",
+    "source": "Papanicolaou Respiratory Cytology, Chapter 4 (Category III: Atypical)",
+    "cell_size_shape": "Variably enlarged epithelial cells, about 20-60 µm, show cytomegaly with vacuolated or metaplastic cytoplasm; reactive bronchial cells, type II pneumocyte hyperplasia, atypical metaplasia, and reserve cell hyperplasia are common forms.",
+    "nuclear_size_shape": "Nuclei are mildly enlarged, oval to irregular, with anisonucleosis but not extreme pleomorphism.",
+    "nuclear_membrane_contour": "Membranes are smooth to slightly irregular, with limited notching and no specific pseudoinclusions.",
+    "chromatin_nucleoli": "Chromatin is fine to mildly coarse; nucleoli are small or only occasionally visible.",
+    "nc_ratio_cytoplasm": "N:C ratio is mildly to moderately increased, approximately 0.4-0.5, with moderate vacuolated, metaplastic, or fragile cytoplasm.",
+    "architecture_arrangement": "Cells occur as scattered singles or loose clusters with partial polarity loss, not definitive tight 3D epithelial groups."
+  },
+  {
+    "category": "Serous effusion-Negative samples (胸腹水-恶性阴性, includes benign mesothelial + reactive + inflammatory background)",
+    "source": "International System for Serous Fluid Cytopathology, Chapter 3 (Negative for Malignancy)",
+    "cell_size_shape": "Mesothelial cells are round to polygonal, about 15-30 µm, with dense two-tone cytoplasm and occasional frilly skirt edges; background includes histiocytes (20-50 µm), lymphocytes (7-10 µm), and neutrophils.",
+    "nuclear_size_shape": "Mesothelial nuclei measure 10-15 µm (1.5-2 times a neutrophil) and are relatively uniform; reactive forms may show mild enlargement with mild anisonucleosis.",
+    "nuclear_membrane_contour": "Nuclear membranes are smooth and even, without grooves, notches, or pseudoinclusions even in reactive forms.",
+    "chromatin_nucleoli": "Chromatin is fine and evenly granular; small nucleoli may be visible, sometimes prominent in reactive cells but without macronucleoli.",
+    "nc_ratio_cytoplasm": "N:C ratio is low to moderate, approximately 0.3-0.5, with abundant dense endoplasm and peripheral ectoplasm; cytoplasmic vacuolation including signet-ring-like forms may be seen.",
+    "architecture_arrangement": "Cells occur singly, in flat sheets, or small cohesive groups with characteristic intercellular windows and cell-in-cell clasping; inflammatory cells are admixed in the background."
+  },
+  {
+    "category": "Serous effusion-Diseased cells (胸腹水-病变细胞, broader than AUS - includes atypia, marked reactive change, degeneration)",
+    "source": "International System for Serous Fluid Cytopathology, Chapter 4 (AUS) + Chapter 3 (marked reactive mesothelial proliferations)",
+    "cell_size_shape": "Enlarged mesothelial-like or epithelioid cells, about 20-40 µm, have dense or vacuolated cytoplasm; degenerated forms may show cytoplasmic wisps or vacuolation.",
+    "nuclear_size_shape": "Nuclei are enlarged round to oval, about 10-20 µm, with mild to moderate anisonucleosis.",
+    "nuclear_membrane_contour": "Membranes are smooth to slightly irregular, with limited notching and no overt bizarre contours.",
+    "chromatin_nucleoli": "Chromatin is mildly irregular, coarse, or smudged in degenerated cells; nucleoli may be prominent in reactive cells but are not uniformly macronucleolar.",
+    "nc_ratio_cytoplasm": "N:C ratio is moderately increased, approximately 0.4-0.6, with abundant dense or vacuolated cytoplasm.",
+    "architecture_arrangement": "Cells form reactive clusters or limited papillary/pseudoglandular groups, often retaining some intercellular windows; degenerated mesothelial cells may appear in flat sheets or as isolated forms."
+  },
+  {
+    "category": "Thyroid gland-PTC (甲状腺-乳头状癌, Bethesda VI)",
+    "source": "Bethesda Thyroid, Chapter 8",
+    "cell_size_shape": "Medium polygonal follicular cells, about 15-30 µm, show delicate cyanophilic cytoplasm and crowded oval profiles.",
+    "nuclear_size_shape": "Nuclei are enlarged, oval, and overlapping, about 10-15 µm or 1.5-2 times an RBC diameter.",
+    "nuclear_membrane_contour": "Nuclear membranes are irregular with frequent grooves and true intranuclear pseudoinclusions (sharply bordered, same color as cytoplasm).",
+    "chromatin_nucleoli": "Chromatin is pale, powdery, and finely dispersed; nucleoli are typically 1-3 small marginal micronucleoli located eccentrically against the nuclear membrane.",
+    "nc_ratio_cytoplasm": "N:C ratio is mildly to moderately increased, approximately 0.4-0.5, with delicate scant-to-moderate cyanophilic cytoplasm.",
+    "architecture_arrangement": "Papillary fragments, syncytial sheets, swirls, and micropapillae dominate; multinucleated giant cells, psammoma bodies (4-20% of cases), and bubble-gum colloid may be present."
+  },
+  {
+    "category": "Thyroid gland-SPTC (甲状腺-可疑乳头状癌, Suspicious for PTC, Bethesda V subset)",
+    "source": "Bethesda Thyroid, Chapter 7 (Suspicious for PTC patterns)",
+    "cell_size_shape": "Follicular cells are 15-30 µm with delicate cytoplasm and crowded oval profiles, similar to PTC but with focal or incomplete features.",
+    "nuclear_size_shape": "Enlarged oval nuclei are about 10-15 µm or 1.5-2 RBC diameters in atypical cells; mild-to-moderate generalized enlargement with pallor in incomplete nuclear changes pattern.",
+    "nuclear_membrane_contour": "Membranes show grooves, mild membrane irregularity, and rare or questionable INPIs (sharp definitive INPIs absent or very few); psammoma bodies and papillary architecture are absent.",
+    "chromatin_nucleoli": "Chromatin is powdery in atypical cells; small but prominent nucleoli are common.",
+    "nc_ratio_cytoplasm": "N:C ratio is moderately increased, approximately 0.5, in atypical cells; surrounding bland follicular cells retain N:C ~0.3-0.4.",
+    "architecture_arrangement": "Sheets, loose clusters, or sparse papillaroid groups of follicular cells with PTC-like changes are admixed with bland follicular cells; diagnostic features fall short in quantity or quality for definitive PTC. A rare cystic degeneration variant may show histiocytoid cells with abundant vacuolated cytoplasm and atypical nuclei."
+  },
+  {
+    "category": "Thyroid gland-NS (甲状腺-杂质, FNA-specific artifact - not Bethesda I non-diagnostic)",
+    "source": "Bethesda Thyroid, Chapter 2 (Figures 2.1, 2.3, 2.4 - air-drying artifact, obscuring blood, ultrasound gel)",
+    "cell_size_shape": "FNA-specific artifacts: ultrasound gel precipitate (refractile angular fragments and droplets, often basophilic), syringe lubricant crystals, blood clots obscuring cellular detail, and air-drying artifact distorting cell morphology.",
+    "nuclear_size_shape": "No identifiable cellular nuclei in pure artifact areas; air-dried cells may show enlarged, smudged, or distorted nuclear outlines that should not be diagnostically interpreted.",
+    "nuclear_membrane_contour": "No reliable nuclear membrane contour; visible edges are gel droplet margins, fibrin strands, or distorted cell boundaries.",
+    "chromatin_nucleoli": "No interpretable chromatin pattern; air-dried cells show smudged or unstainable chromatin.",
+    "nc_ratio_cytoplasm": "Not applicable - material is acellular artifact or cells too distorted to evaluate.",
+    "architecture_arrangement": "Material lies as refractile gel droplets, lubricant crystals, fibrin networks, blood clots, or sheets of air-dried unstained cells without diagnostic follicular epithelium."
+  },
+  {
+    "category": "Thyroid gland-Macrophages (甲状腺-巨噬细胞, cyst-related)",
+    "source": "Bethesda Thyroid, Chapter 2 Figure 2.2 + Chapter 3 Figure 3.13",
+    "cell_size_shape": "Large histiocytes, about 20-50 µm, are round or oval with abundant foamy vacuolated cytoplasm; hemosiderin pigment is common in cystic degeneration.",
+    "nuclear_size_shape": "Eccentric oval nuclei measure about 8-12 µm and are small relative to cytoplasm.",
+    "nuclear_membrane_contour": "Nuclear membranes are smooth, sometimes gently indented or reniform, without grooves or pseudoinclusions.",
+    "chromatin_nucleoli": "Chromatin is open, vesicular, and finely dispersed in the histiocytic pattern, softer and more open than epithelial follicular chromatin; nucleoli are inconspicuous or small.",
+    "nc_ratio_cytoplasm": "N:C ratio is very low, <0.3, with abundant foamy vacuolated pale or hemosiderin-laden cytoplasm.",
+    "architecture_arrangement": "Cells appear singly or in loose histiocytic clusters against a cyst-fluid background; not honeycomb follicular sheets."
+  },
+  {
+    "category": "Thyroid gland-AUC (甲状腺-意义不明确的非典型性, equivalent to Bethesda III AUS/FLUS)",
+    "source": "Bethesda Thyroid, Chapter 4 (AUS - Architectural Atypia and Cytologic Atypia subtypes)",
+    "cell_size_shape": "Follicular cells are 10-20 µm, sometimes oncocytic, with scant-to-moderate granular or delicate cytoplasm.",
+    "nuclear_size_shape": "Nuclei are mildly enlarged, round to oval, about 1.5-2 times bland follicular nuclei, in a limited subset of cells.",
+    "nuclear_membrane_contour": "Membranes show slight irregularity, rare grooves, or subtle notches without convincing pseudoinclusions.",
+    "chromatin_nucleoli": "Chromatin is pale or mildly coarse; nucleoli are inconspicuous or small.",
+    "nc_ratio_cytoplasm": "N:C ratio is mildly increased, approximately 0.4-0.5, in atypical cells with scant-to-moderate delicate or oncocytic granular cytoplasm.",
+    "architecture_arrangement": "Sparsely cellular microfollicles, crowded trabecular groups, or focal cellular crowding appear without a uniform microfollicular pattern; atypia is focal and limited in extent."
+  },
+  {
+    "category": "Thyroid gland-Negative samples (甲状腺-阴性样本, dataset negative placeholder; benign non-follicular non-macrophage background)",
+    "source": "Bethesda Thyroid, Chapter 3 (Benign - per Excel schema, this is a negative sample category for final exclusion; covers benign background components other than Macrophages (#13) and Follicular cells (#16) which are separately classified)",
+    "cell_size_shape": "Benign background components not covered by other thyroid classes: colloid (acellular amorphous material), oncocytic/Hürthle cells (15-25 µm with granular eosinophilic cytoplasm), cyst wall cells (elongated squamoid 15-30 µm), lymphocytes (7-10 µm), and granulocytes.",
+    "nuclear_size_shape": "Bland uniform nuclei across components; small (6-10 µm) in lymphocytes; larger (8-12 µm) in oncocytic and wall cells; not applicable for colloid.",
+    "nuclear_membrane_contour": "Nuclear membranes are smooth and regular across all benign components, without grooves or pseudoinclusions.",
+    "chromatin_nucleoli": "Chromatin is fine and even; small nucleoli may be visible in oncocytic cells but are not macronucleolar.",
+    "nc_ratio_cytoplasm": "N:C ratio is low to moderate (0.3-0.5) across cellular components; not applicable for acellular colloid.",
+    "architecture_arrangement": "Watery or thick colloid (with cracks and folds), scattered lymphocytes, oncocytic clusters, and cyst wall cell strips characterize a benign background; this class is intended to be evaluated and excluded as a negative reference per the dataset schema."
+  },
+  {
+    "category": "Thyroid gland-FC (甲状腺-滤泡细胞, benign follicular cells, Bethesda II)",
+    "source": "Bethesda Thyroid, Chapter 3 (Benign - follicular nodular disease pattern, honeycomb sheets)",
+    "cell_size_shape": "Follicular epithelial cells are about 10-15 µm, cuboidal to polygonal, with delicate pale cytoplasm.",
+    "nuclear_size_shape": "Round centrally placed nuclei measure about 6-10 µm and are uniform in size and spacing.",
+    "nuclear_membrane_contour": "Nuclear membranes are smooth and even, without grooves, notches, or pseudoinclusions.",
+    "chromatin_nucleoli": "Chromatin is uniformly fine and granular without clumping (the characteristic bland follicular pattern); nucleoli are inconspicuous or tiny, distinguishing these from the neuroendocrine stippling of MTC.",
+    "nc_ratio_cytoplasm": "N:C ratio is low to moderate, approximately 0.3-0.5, with delicate pale cytoplasm.",
+    "architecture_arrangement": "Cohesive monolayer sheets, honeycomb groups, small follicles, and macrofollicular fragments show orderly follicular architecture; colloid may be associated."
+  },
+  {
+    "category": "Urine-NHGUC (尿液-阴性高级别尿路上皮癌)",
+    "source": "Paris System for Reporting Urinary Cytology, Chapter 3",
+    "cell_size_shape": "Urothelial cells are about 15-50 µm, polygonal or caudate, with abundant cytoplasm; umbrella cells are largest.",
+    "nuclear_size_shape": "Oval nuclei measure about 5-12 µm and are small relative to cytoplasm; umbrella cells may be binucleated.",
+    "nuclear_membrane_contour": "Nuclear membranes are smooth and regular, without marked irregular rims.",
+    "chromatin_nucleoli": "Chromatin is fine and evenly granular in urothelial cells; umbrella cell nuclei may show slightly coarser but still bland chromatin; nucleoli are inconspicuous or small.",
+    "nc_ratio_cytoplasm": "N:C ratio is low, <0.5, with abundant delicate or dense cytoplasm.",
+    "architecture_arrangement": "Cells form flat sheets, small cohesive clusters, or singly dispersed umbrella and intermediate cells."
+  },
+  {
+    "category": "Urine-SHGUC (尿液-可疑高级别尿路上皮癌)",
+    "source": "Paris System for Reporting Urinary Cytology, Chapter 5",
+    "cell_size_shape": "Few atypical urothelial cells, about 12-30 µm, have scant dense cytoplasm.",
+    "nuclear_size_shape": "Nuclei are enlarged, irregular, hyperchromatic, often 10-20 µm, and occupy most of the cell.",
+    "nuclear_membrane_contour": "Nuclear membranes are irregular with sharply uneven chromatinic rims (one of three minor criteria; at least two of three required).",
+    "chromatin_nucleoli": "Chromatin is coarse, clumpy, and moderately to severely hyperchromatic (one of three minor criteria); nucleoli are absent or occasional.",
+    "nc_ratio_cytoplasm": "N:C ratio is high, ≥0.7 (required major criterion), with scant dense cyanophilic cytoplasm.",
+    "architecture_arrangement": "Severely atypical cells occur singly or in small clusters, with cell numbers below the HGUC threshold (typically fewer than ~5-10 cells, depending on whether the specimen is from the lower or upper urinary tract)."
+  },
+  {
+    "category": "Urine-AUC (尿液-非典型尿路上皮细胞)",
+    "source": "Paris System for Reporting Urinary Cytology, Chapter 4",
+    "cell_size_shape": "Scattered urothelial cells, about 12-30 µm, show mild enlargement with scant-to-moderate cytoplasm.",
+    "nuclear_size_shape": "Nuclei are enlarged but variable, about 8-15 µm, with mild anisonucleosis; nucleomegaly is required.",
+    "nuclear_membrane_contour": "Nuclear contours may be mildly irregular or slightly angulated as one of three possible minor criteria (hyperchromasia, irregular clumpy chromatin, or irregular contour); only one minor criterion is required in addition to the major N:C criterion.",
+    "chromatin_nucleoli": "Chromatin may be mildly hyperchromatic or clumpy if serving as the minor criterion; nucleoli are inconspicuous or small.",
+    "nc_ratio_cytoplasm": "N:C ratio is increased, ≥0.5 (required major criterion), with scant-to-moderate dense cytoplasm.",
+    "architecture_arrangement": "Cells occur singly or in small groups, meeting the major N:C criterion plus only one minor criterion, falling short of SHGUC."
+  },
+  {
+    "category": "Urine-HGUC (尿液-高级别尿路上皮癌)",
+    "source": "Paris System for Reporting Urinary Cytology, Chapter 6",
+    "cell_size_shape": "Pleomorphic urothelial cells, about 12-40 µm, are dyscohesive with scant dense cytoplasm.",
+    "nuclear_size_shape": "Nuclei are markedly enlarged, irregular, and hyperchromatic, often >10 µm with prominent anisonucleosis.",
+    "nuclear_membrane_contour": "Nuclear membranes are markedly irregular, angulated, and unevenly thickened.",
+    "chromatin_nucleoli": "Chromatin is coarse, clumpy, and dark (rare hypochromatic variants exist); nucleoli are occasional or prominent.",
+    "nc_ratio_cytoplasm": "N:C ratio is high, ≥0.7 in most diagnostic cells, with scant dense cyanophilic cytoplasm.",
+    "architecture_arrangement": "At least 5 unequivocally malignant cells (lower tract) or at least 10 (upper tract) occur singly and in irregular clusters, often with necrotic debris, mitoses, and crowded fragments."
+  },
+  {
+    "category": "TCT_CCD-normal (宫颈-正常细胞, merged N_basal/intermediate/superficial/metaplastic/repair)",
+    "source": "NOT IN PROJECT KNOWLEDGE BASE - Bethesda Cervical not included; description based on standard Bethesda cervical NILM criteria",
+    "cell_size_shape": "Superficial squamous cells 40-70 µm flat polygonal with transparent cytoplasm; intermediate cells 30-50 µm; metaplastic cells 15-25 µm polygonal with denser cytoplasm and occasional spider-like cytoplasmic projections; basal cells 10-15 µm small round with dense cytoplasm; repair cells form cohesive flat sheets of streaming polygonal cells with mild nuclear enlargement.",
+    "nuclear_size_shape": "Nuclei are small and pyknotic in superficial cells (5-8 µm), finely chromatic in intermediate cells (8-10 µm), uniform round/oval in metaplastic and basal cells (8-10 µm); repair cells show enlarged nuclei with prominent nucleoli but uniform spacing and streaming orientation.",
+    "nuclear_membrane_contour": "Nuclear membranes are smooth and regular across all benign squamous components, without irregular rims or koilocytotic changes.",
+    "chromatin_nucleoli": "Chromatin is fine and evenly distributed or pyknotically condensed; nucleoli are absent or inconspicuous except in repair cells, which may have prominent uniform nucleoli.",
+    "nc_ratio_cytoplasm": "N:C ratio is very low in mature squamous (<0.1) but low-to-moderate in metaplastic and repair cells (0.3-0.5).",
+    "architecture_arrangement": "Cells form flat sheets, singles, or small cohesive groups; metaplastic cells may show spider-like cytoplasmic projections; repair cells form streaming flat sheets with uniform polarity; preserved maturation throughout."
+  },
+  {
+    "category": "TCT_CCD-ascus (宫颈-ASCUS, atypical squamous cells of undetermined significance)",
+    "source": "NOT IN PROJECT KNOWLEDGE BASE - description based on standard Bethesda cervical criteria",
+    "cell_size_shape": "Mature squamous cells are 40-70 µm, polygonal, with abundant cytoplasm but borderline nuclear enlargement.",
+    "nuclear_size_shape": "Nuclear area is about 2.5-3 times that of normal intermediate-cell nuclei; nuclei are round to oval with mild variation.",
+    "nuclear_membrane_contour": "Nuclear membranes show slight irregularity, without sharply defined koilocytotic rims.",
+    "chromatin_nucleoli": "Chromatin is mildly hyperchromatic or granular; nucleoli are absent or inconspicuous.",
+    "nc_ratio_cytoplasm": "N:C ratio is low to mildly increased, approximately 0.1-0.2, with abundant mature cyanophilic cytoplasm.",
+    "architecture_arrangement": "Cells occur singly or in sheets, lacking definitive koilocytes with crisp perinuclear halos."
+  },
+  {
+    "category": "TCT_CCD-asch (宫颈-ASC-H, atypical squamous cells cannot exclude HSIL)",
+    "source": "NOT IN PROJECT KNOWLEDGE BASE - description based on standard Bethesda cervical criteria",
+    "cell_size_shape": "Small metaplastic-like cells, about 12-18 µm, have scant dense cyanophilic cytoplasm.",
+    "nuclear_size_shape": "Nuclei are enlarged for cell size, about 8-15 µm, producing crowded high-N:C cells.",
+    "nuclear_membrane_contour": "Nuclear membranes are irregular, angulated, or slightly notched.",
+    "chromatin_nucleoli": "Chromatin is hyperchromatic and coarse; nucleoli are absent.",
+    "nc_ratio_cytoplasm": "N:C ratio is increased, approximately 0.5-0.7, with scant dense cytoplasm; overlaps with HSIL but ASC-H has fewer atypical cells or less definitive criteria.",
+    "architecture_arrangement": "Atypical cells occur singly or in small crowded fragments, too limited in quantity or fully diagnostic quality for an HSIL interpretation."
+  },
+  {
+    "category": "TCT_CCD-lsil (宫颈-LSIL, low-grade squamous intraepithelial lesion / koilocytes)",
+    "source": "NOT IN PROJECT KNOWLEDGE BASE - description based on standard Bethesda cervical criteria",
+    "cell_size_shape": "Mature superficial or intermediate squamous cells are 40-70 µm and show koilocytic halos.",
+    "nuclear_size_shape": "Nuclei measure about 12-15 µm or have area at least three times intermediate-cell nuclei, within mature cytoplasmic background; binucleation is common.",
+    "nuclear_membrane_contour": "Nuclear membranes are irregular, wrinkled, or angulated within koilocytes.",
+    "chromatin_nucleoli": "Chromatin is coarse and hyperchromatic; nucleoli are generally absent.",
+    "nc_ratio_cytoplasm": "N:C ratio is low to moderate, approximately 0.2-0.4, with abundant cytoplasm and sharply defined perinuclear koilocytic halos.",
+    "architecture_arrangement": "Cells occur singly or in sheets, with koilocytes and binucleation as the defining arrangement."
+  },
+  {
+    "category": "TCT_CCD-hsil_scc_omn (宫颈-HSIL + 鳞癌 + 其他恶性肿瘤, merged class; omn assumed = Other Malignant Neoplasm per Excel)",
+    "source": "NOT IN PROJECT KNOWLEDGE BASE - description based on standard Bethesda cervical criteria; merged HSIL + invasive SCC (keratinizing and non-keratinizing) + other malignant neoplasms (e.g. small cell carcinoma, adenosquamous, rare malignancies)",
+    "cell_size_shape": "Three populations: HSIL small immature cells 10-25 µm with scant basophilic cytoplasm; non-keratinizing SCC similar but with macronucleoli and tumor diathesis; keratinizing SCC includes pleomorphic 30-80 µm polygonal/tadpole/spindle/fiber-shaped cells with dense orangeophilic cytoplasm; other rare malignant cells variable.",
+    "nuclear_size_shape": "HSIL nuclei 10-18 µm in small cells producing very high N:C; SCC nuclei larger 15-30 µm with marked pleomorphism, hyperchromatic or pyknotic in keratinized forms.",
+    "nuclear_membrane_contour": "Markedly irregular, angulated, or coarse-rimmed across all three populations.",
+    "chromatin_nucleoli": "Chromatin is hyperchromatic and coarse; HSIL nucleoli absent; SCC may show prominent nucleoli in non-keratinizing variants.",
+    "nc_ratio_cytoplasm": "HSIL N:C ≥0.7 with scant basophilic cytoplasm; keratinized SCC has low N:C (<0.3) with dense orangeophilic cytoplasm; non-keratinizing SCC high N:C ≥0.7.",
+    "architecture_arrangement": "HSIL forms syncytial aggregates or singles; invasive SCC features dyscohesive keratinizing tadpole/spindle cells in tumor diathesis with necrotic background and dyskeratotic cells."
+  },
+  {
+    "category": "TCT_CCD-agc_adenocarcinoma_em (宫颈-AGC + 腺癌 + 子宫内膜细胞, merged class)",
+    "source": "NOT IN PROJECT KNOWLEDGE BASE - description based on standard Bethesda cervical criteria; merged AGC + endocervical adenocarcinoma (AIS and invasive) + endometrial cells (normal exfoliated and atypical/malignant)",
+    "cell_size_shape": "AGC: enlarged endocervical or endometrial cells 15-30 µm with mucinous or scant cytoplasm; endocervical adenocarcinoma: columnar cells 15-35 µm with mucin vacuoles, pseudostratified columnar arrangement; endometrial cells: small dense cells 10-15 µm in tight ball clusters.",
+    "nuclear_size_shape": "AGC: enlarged 10-20 µm oval to elongated nuclei; adenocarcinoma: enlarged 12-25 µm with marked pleomorphism and eccentric nuclei; bland endometrial: small dark 6-10 µm nuclei in tight balls.",
+    "nuclear_membrane_contour": "AGC: mild irregularity with crowding/overlap; adenocarcinoma: distinctly irregular, folded, or notched; bland endometrial: smooth but tightly clustered.",
+    "chromatin_nucleoli": "AGC: coarse or vesicular chromatin with visible nucleoli; adenocarcinoma: prominent or macronucleoli, coarse chromatin; bland endometrial: dark fine chromatin with inconspicuous nucleoli.",
+    "nc_ratio_cytoplasm": "AGC N:C ≥0.5; adenocarcinoma N:C ≥0.5 despite mucinous cytoplasm; bland endometrial N:C >0.7 from scant cytoplasm.",
+    "architecture_arrangement": "AGC and adenocarcinoma form strips, rosettes, feathered (feathering-edge) sheets, pseudostratified columnar groups, and 3D crowded clusters; endometrial cells form tight ball-like 3D clusters."
+  },
+  {
+    "category": "TCT_CCD-vaginalis (宫颈-滴虫, Trichomonas vaginalis)",
+    "source": "NOT IN PROJECT KNOWLEDGE BASE - description based on standard cervical cytology criteria",
+    "cell_size_shape": "Pear-shaped or oval organisms, about 15-30 µm, have pale finely granular cytoplasm.",
+    "nuclear_size_shape": "A small eccentric vesicular nucleus, about 2-5 µm, sits within each organism.",
+    "nuclear_membrane_contour": "Nuclear membranes are smooth and eccentrically placed, without grooves or molding.",
+    "chromatin_nucleoli": "Chromatin is fine and vesicular; nucleoli are not prominent.",
+    "nc_ratio_cytoplasm": "Organismal N:C ratio is low, approximately 0.1-0.2; cytoplasm is pale granular, and flagella are rarely visible on Pap stain.",
+    "architecture_arrangement": "Organisms lie singly among squamous cells, without epithelial sheets or pseudohyphal spearing."
+  },
+  {
+    "category": "TCT_CCD-monilia (宫颈-念珠菌, Candida)",
+    "source": "NOT IN PROJECT KNOWLEDGE BASE - description based on standard cervical cytology criteria",
+    "cell_size_shape": "Budding yeasts are 3-7 µm; pseudohyphae are elongated segmented filaments, eosinophilic to gray on Pap stain.",
+    "nuclear_size_shape": "Fungal nuclei are not resolved on routine stains; adjacent squamous nuclei remain bland or mildly reactive.",
+    "nuclear_membrane_contour": "No definable fungal nuclear membrane contour is seen; pseudohyphae show constrictions at septa.",
+    "chromatin_nucleoli": "No fungal chromatin or nucleoli are visible; host chromatin is bland or mildly reactive.",
+    "nc_ratio_cytoplasm": "Not applicable - fungal forms have no resolvable nucleus on routine stains; pseudohyphae and yeasts have dense eosinophilic-to-gray cytoplasm.",
+    "architecture_arrangement": "Budding yeasts and constricted pseudohyphae form spearing or shish-kebab arrays across squamous cells."
+  },
+  {
+    "category": "TCT_CCD-dysbacteriosis_herpes_act (宫颈-菌群失调/疱疹/放线菌, merged BV + HSV + Actinomyces)",
+    "source": "NOT IN PROJECT KNOWLEDGE BASE - description based on standard cervical cytology criteria",
+    "cell_size_shape": "BV (dysbacteriosis): squamous clue cells 40-70 µm coated by coccobacilli; HSV-infected cells enlarged 30-50 µm with multinucleation; Actinomyces forms cotton-ball filamentous colonies.",
+    "nuclear_size_shape": "Clue-cell nuclei are bland; HSV nuclei are enlarged, multinucleated, molded, and ground-glass; Actinomyces lacks epithelial nuclei.",
+    "nuclear_membrane_contour": "HSV nuclear membranes show molding and peripheral chromatin margination; clue-cell nuclei remain smooth; Actinomyces colonies are filamentous without cellular membranes.",
+    "chromatin_nucleoli": "HSV chromatin appears ground-glass with margination and occasional eosinophilic intranuclear inclusions; clue-cell chromatin is bland; Actinomyces has no chromatin.",
+    "nc_ratio_cytoplasm": "Clue cells retain low N:C (<0.1) with bacteria-coated cytoplasm; HSV cells show moderate N:C (~0.4-0.6) due to enlarged nuclei; not applicable for Actinomyces filaments.",
+    "architecture_arrangement": "Clue cells coated by coccobacilli (BV), multinucleated molded HSV-infected cells, or cotton-ball Actinomyces aggregates with peripheral filamentous radiation."
+  },
+  {
+    "category": "TCT_CCD-ec (宫颈-正常颈管腺细胞, endocervical glandular cells only - metaplastic cells separate)",
+    "source": "NOT IN PROJECT KNOWLEDGE BASE - description based on standard Bethesda cervical NILM criteria; per Excel schema 'ec' = endocervical glandular cells only (N_Metaplastic_cell is separately classified within normal class)",
+    "cell_size_shape": "Bland columnar cells, about 15-30 µm tall, have mucinous or finely vacuolated apical cytoplasm.",
+    "nuclear_size_shape": "Basally placed oval nuclei measure about 7-12 µm and are uniform in size and spacing.",
+    "nuclear_membrane_contour": "Nuclear membranes are smooth and regular, without crowding-related irregular rims, grooves, or pseudoinclusions.",
+    "chromatin_nucleoli": "Chromatin is fine and granular, evenly distributed within basally palisaded nuclei; nucleoli are inconspicuous or small and single, without the macronucleoli of adenocarcinoma.",
+    "nc_ratio_cytoplasm": "N:C ratio is low to moderate, approximately 0.3-0.5, with mucinous apical and basal cytoplasm.",
+    "architecture_arrangement": "Cells form honeycomb sheets (en face view) and picket-fence palisaded strips (side view) with orderly basal nuclear alignment; no 3D crowding, feathering, or rosettes."
+  },
+  {
+    "category": "respiratory tract-Squamous cell carcinoma (呼吸道-鳞状细胞癌)",
+    "source": "Papanicolaou Respiratory Cytology, Chapter 8 (Category VI: Malignant - Squamous Cell Carcinoma)",
+    "cell_size_shape": "Pleomorphic epithelial cells, 15-80 µm, include keratinizing polygonal, tadpole, spindle, and fiber-like forms.",
+    "nuclear_size_shape": "Nuclei are enlarged and variable, about 10-30 µm, often hyperchromatic or pyknotic in keratinized cells.",
+    "nuclear_membrane_contour": "Nuclear membranes are markedly irregular, angulated, and coarse-rimmed.",
+    "chromatin_nucleoli": "Chromatin is coarse and hyperchromatic; nucleoli are variable, sometimes prominent in less keratinized cells.",
+    "nc_ratio_cytoplasm": "N:C ratio varies widely by cell type: basaloid non-keratinizing cells show high N:C (≥0.7), whereas keratinized cells show low N:C (<0.3) with dense orangeophilic cytoplasm.",
+    "architecture_arrangement": "Dyscohesive keratinizing tadpole and spindle cells lie in tumor diathesis, separating them from bland flat squamous sheets."
+  },
+  {
+    "category": "respiratory tract-adenocarcinoma (呼吸道-腺癌)",
+    "source": "Papanicolaou Respiratory Cytology, Chapter 8 (Category VI: Malignant - Adenocarcinoma)",
+    "cell_size_shape": "Cuboidal to columnar epithelial cells, 15-40 µm, have vacuolated or mucinous cytoplasm.",
+    "nuclear_size_shape": "Nuclei are enlarged, round to oval, 10-25 µm, sometimes eccentric and overlapping.",
+    "nuclear_membrane_contour": "Nuclear membranes are irregular or focally distorted, without ciliated terminal-bar polarity.",
+    "chromatin_nucleoli": "Chromatin is coarse or vesicular; prominent macronucleoli are frequent.",
+    "nc_ratio_cytoplasm": "N:C ratio is moderately increased, approximately 0.5-0.7, with intracytoplasmic mucin vacuoles or delicate glandular cytoplasm.",
+    "architecture_arrangement": "Tight 3D glandular clusters, acini, papillae, and intracytoplasmic mucin vacuoles replace ciliated strips or foamy macrophages."
+  },
+  {
+    "category": "respiratory tract-Small cell carcinoma (呼吸道-小细胞癌)",
+    "source": "Papanicolaou Respiratory Cytology, Chapter 8 (Category VI: Malignant - Small Cell Carcinoma)",
+    "cell_size_shape": "Small fragile blue cells, about 10-20 µm (roughly 2-3 times a mature lymphocyte), have scant almost invisible cytoplasm.",
+    "nuclear_size_shape": "Nuclei are about 10-20 µm, oval to elongated, and nearly fill the cell.",
+    "nuclear_membrane_contour": "Nuclear membranes are molded, angulated, and crushed against adjacent nuclei.",
+    "chromatin_nucleoli": "Chromatin is finely granular salt-and-pepper neuroendocrine type or smudged; nucleoli are absent or inconspicuous.",
+    "nc_ratio_cytoplasm": "N:C ratio is very high, >0.8, with scant fragile cytoplasm, prominent crush artifact, and nuclear streaking.",
+    "architecture_arrangement": "Numerous singly dispersed cells predominate, alternating with loosely cohesive aggregates and occasional rosettes; nuclear molding, apoptotic blue bodies, mitoses, and necrotic debris in the background are characteristic."
+  },
+  {
+    "category": "Serous effusion-Breast cancer (胸腹水-乳腺癌转移)",
+    "source": "International System for Serous Fluid Cytopathology, Chapter 7 (Malignant-Secondary - metastatic breast carcinoma)",
+    "cell_size_shape": "Two predominant morphologic patterns: ductal carcinoma cells are small-to-medium polygonal 15-25 µm with moderate cytoplasm (morphologically indistinguishable from generic adenocarcinoma without IHC); lobular carcinoma cells are small dyscohesive 10-18 µm with scant cytoplasm and frequent signet-ring forms.",
+    "nuclear_size_shape": "Ductal nuclei mildly to moderately enlarged 10-15 µm; lobular nuclei small (8-12 µm), round, and notably uniform with relatively less pleomorphism than other adenocarcinomas.",
+    "nuclear_membrane_contour": "Ductal: slightly to moderately irregular; lobular: smooth to mildly irregular with characteristic uniformity.",
+    "chromatin_nucleoli": "Ductal: finely to moderately granular with small to moderately prominent nucleoli; lobular: fine to slightly coarse chromatin with inconspicuous nucleoli.",
+    "nc_ratio_cytoplasm": "N:C ratio is moderately increased, approximately 0.5-0.7; signet-ring forms have nucleus displaced peripherally by a single mucin vacuole.",
+    "architecture_arrangement": "Ductal pattern: 3D 'cannonball' clusters with smooth contours, occasional acini (morphologically often indistinguishable from generic adenocarcinoma - requires ER/PR/GATA3/GCDFP-15 IHC for confirmation); lobular pattern: characteristic single-file/Indian-file linear arrangements, dyscohesive single cells, and signet-ring cells (morphologically suggestive of breast origin); foreign cell population lacking mesothelial windows."
+  },
+  {
+    "category": "Serous effusion-Ovarian cancer (胸腹水-卵巢癌转移, predominantly HGSC)",
+    "source": "International System for Serous Fluid Cytopathology, Chapter 7 + Chapter 9 (metastatic ovarian high-grade serous carcinoma)",
+    "cell_size_shape": "Large epithelial cells, 20-40 µm, polygonal to cuboidal with moderate basophilic to vacuolated cytoplasm; high-grade serous carcinoma cells show marked size variation.",
+    "nuclear_size_shape": "Nuclei are markedly enlarged and pleomorphic, 12-25 µm, often with bizarre forms and 3+ fold size variation in HGSC.",
+    "nuclear_membrane_contour": "Nuclear membranes are markedly irregular, folded, or angulated, not smooth mesothelial rims.",
+    "chromatin_nucleoli": "Chromatin is coarse and vesicular; cherry-red macronucleoli are characteristic and frequent.",
+    "nc_ratio_cytoplasm": "N:C ratio is high, approximately 0.5-0.7, with moderate basophilic cytoplasm.",
+    "architecture_arrangement": "Large branching papillary fragments, 3D cell balls/spheres, and psammoma bodies (intracellular or stromal) form a distinctly foreign epithelial population lacking mesothelial intercellular windows; low-grade serous variants show smaller cells with hobnailed/scalloped cluster borders."
+  },
+  {
+    "category": "Serous effusion-adenocarcinoma (胸腹水-腺癌, generic GI/lung/pancreaticobiliary)",
+    "source": "International System for Serous Fluid Cytopathology, Chapter 7 (Malignant-Secondary - metastatic adenocarcinoma from gastrointestinal, pancreaticobiliary, lung, and other sites; includes signet-ring and mucinous variants)",
+    "cell_size_shape": "Glandular epithelial cells, 15-50 µm, cuboidal, columnar, or signet-ring with mucinous, vacuolated, or dense cytoplasm; columnar morphology suggests GI/pancreaticobiliary, smaller round cells suggest lung.",
+    "nuclear_size_shape": "Nuclei are enlarged, eccentric, round to oval, 10-25 µm, with conspicuous anisonucleosis.",
+    "nuclear_membrane_contour": "Nuclear membranes are irregular, folded, or distorted by mucin vacuoles.",
+    "chromatin_nucleoli": "Chromatin is coarse or vesicular; nucleoli are prominent or macronucleolar.",
+    "nc_ratio_cytoplasm": "N:C ratio is moderately increased, approximately 0.5-0.7, despite vacuolated mucin-rich epithelial cytoplasm; signet-ring forms have nucleus pushed peripherally by a single large mucin vacuole.",
+    "architecture_arrangement": "Tight 3D clusters, acini, papillary clusters, signet-ring cells, and gland-in-gland 'cribriform' patterns form a foreign population without mesothelial windows; extracellular mucin background may be evident."
+  },
+  {
+    "category": "Thyroid gland-MTC (甲状腺-髓样癌)",
+    "source": "Bethesda Thyroid, Chapter 9 (Medullary Thyroid Carcinoma)",
+    "cell_size_shape": "Plasmacytoid, polygonal, round, or spindle-shaped cells are 15-30 µm with granular amphophilic cytoplasm; rare giant or bizarre forms may occur.",
+    "nuclear_size_shape": "Eccentric round to oval (or elongated in spindle forms) nuclei measure 8-15 µm; binucleation is common and multinucleation occurs less frequently.",
+    "nuclear_membrane_contour": "Nuclear membranes are smooth to mildly irregular; intranuclear pseudoinclusions (indistinguishable from those of PTC) may be identified in approximately 20-50% of cases, while nuclear grooves are rare or absent.",
+    "chromatin_nucleoli": "Chromatin is finely or coarsely granular salt-and-pepper neuroendocrine type; nucleoli are usually inconspicuous but can be prominent in some cells.",
+    "nc_ratio_cytoplasm": "N:C ratio is moderately increased, approximately 0.5-0.7, with variable granular cytoplasm; small red-purple azurophilic granules may be visible on Romanowsky-stained preparations.",
+    "architecture_arrangement": "Numerous dispersed single cells alternate with syncytium-like crowded aggregates, with occasional rosette/follicular/pseudopapillary arrangements; dense amorphous amyloid (mauve on Romanowsky, pale green to eosinophilic on Pap) is identified in roughly one-third to one-half of aspirates."
+  },
+  {
+    "category": "Thyroid gland-Malignant tumour (甲状腺-恶性肿瘤, merged: PDTC + ATC + SCC + Mixed + Metastatic + NHL per Excel)",
+    "source": "Bethesda Thyroid, Chapter 10 (PDTC) + Chapter 11 (Anaplastic Thyroid Carcinoma) + Chapter 12 (Metastatic Tumors, Lymphomas, Rare Tumors)",
+    "cell_size_shape": "Multiple coexisting entities with distinct hallmark features: PDTC = monomorphic small cells 10-20 µm with insular/trabecular/solid architecture; ATC = markedly pleomorphic 20-100 µm epithelioid + spindled + bizarre giant + osteoclast-like cells; thyroid SCC = keratinizing polygonal/tadpole/spindle 15-80 µm with orangeophilic cytoplasm; metastatic carcinoma = foreign epithelial population (lung adenocarcinoma columnar with mucin, RCC clear cells, melanoma pigmented, etc.); NHL = dyscohesive monomorphic 10-25 µm lymphoid cells with scant basophilic cytoplasm and lymphoglandular bodies in background.",
+    "nuclear_size_shape": "PDTC: small to mildly enlarged nuclei with focal atypia (key distinguishing feature - not uniform pleomorphism); ATC: bizarre giant nuclei >3 RBC diameters with extreme anisonucleosis; SCC: hyperchromatic pleomorphic nuclei; metastatic: depends on primary; NHL: round-to-irregular nuclei with open chromatin.",
+    "nuclear_membrane_contour": "Irregular, angulated, notched, or bizarre across entities; ATC may show multinucleated giant cells; residual PTC-like grooves possible in high-grade follicular-derived carcinoma.",
+    "chromatin_nucleoli": "Coarse/vesicular chromatin with macronucleoli common; ATC + SCC: frequent atypical mitoses; NHL: open chromatin with prominent nucleoli and lymphoglandular bodies.",
+    "nc_ratio_cytoplasm": "N:C ratio high (≥0.7) across most components with scant dense or fragile cytoplasm; SCC keratinized forms have lower N:C (<0.3) with dense orangeophilic cytoplasm.",
+    "architecture_arrangement": "Hallmark architectural patterns: PDTC = insular/trabecular/solid nests; ATC = dyscohesive bizarre cells + osteoclast-like giant cells + extensive necrosis; SCC = dyscohesive keratinizing aggregates in tumor diathesis; metastatic carcinoma = foreign cell population distinct from native follicular cells; NHL = dyscohesive monomorphic lymphoid cells with lymphoglandular bodies; necrosis, mitoses, and apoptosis are common across most components."
+  },
+  {
+    "category": "Thyroid gland-Suspicious for Malignancy (甲状腺-可疑恶性肿瘤, Bethesda V non-PTC subtypes: SMTC + SMC + SL per Excel)",
+    "source": "Bethesda Thyroid, Chapter 7 (Suspicious for Malignancy - excluding SFM-PTC which is separately classified as SPTC); covers Suspicious for MTC + Suspicious for Metastasis + Suspicious for Lymphoma patterns",
+    "cell_size_shape": "Three subtype-specific patterns: SMTC = sparsely/moderately cellular sample with monomorphic small-to-medium-sized non-cohesive cells 12-25 µm with eccentrically located plasmacytoid nuclei; SMC (Suspicious for Metastasis) = scant foreign epithelial cells 15-35 µm not consistent with thyroid origin; SL (Suspicious for Lymphoma) = scattered atypical lymphoid cells with scant basophilic cytoplasm.",
+    "nuclear_size_shape": "SMTC: eccentrically located plasmacytoid nuclei 8-15 µm with rare INPIs and increased N:C; SMC: enlarged nuclei 10-25 µm with foreign-cell appearance; SL: enlarged lymphoid nuclei 10-18 µm with round-to-irregular contours.",
+    "nuclear_membrane_contour": "SMTC: smooth to mildly irregular; SMC: irregular depending on primary; SL: irregular lymphoid nuclear contours.",
+    "chromatin_nucleoli": "SMTC: smudgy chromatin due to suboptimal preservation, no discernible cytoplasmic granules; SMC: depends on primary; SL: open chromatin with scant basophilic cytoplasm.",
+    "nc_ratio_cytoplasm": "N:C ratio moderately to markedly increased (approximately 0.5-0.7) across subtypes, with scant cytoplasm; SMTC may show small amyloid-like fragments (colloid vs amyloid not distinguishable without ancillary studies); definitive diagnosis blocked by inadequate material for IHC/calcitonin washout/flow cytometry.",
+    "architecture_arrangement": "Findings are limited in quantity, quality, or preservation - definitive diagnosis blocked by inadequate material for confirmatory ancillary studies (calcitonin washout for MTC, IHC panels for metastasis, flow cytometry for lymphoma); the report should specify which subtype is suspected."
+  }
+]

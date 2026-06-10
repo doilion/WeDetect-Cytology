@@ -1,0 +1,110 @@
+[
+  {
+    "official_label": "respiratory tract-Squamous cell carcinoma",
+    "user_label": "respiratory tract-Squamous cell carcinoma",
+    "attrs": {
+      "cell_size_shape": "Pleomorphic epithelial cells, 15-80 µm, include keratinizing polygonal, tadpole, spindle, and fiber-like forms.",
+      "nuclear_size_shape": "Nuclei are enlarged and variable, about 10-30 µm, often hyperchromatic or pyknotic in keratinized cells.",
+      "nuclear_membrane_contour": "Nuclear membranes are markedly irregular, angulated, and coarse-rimmed.",
+      "chromatin_nucleoli": "Chromatin is coarse and hyperchromatic; nucleoli are variable, sometimes prominent in less keratinized cells.",
+      "nc_ratio_cytoplasm": "N:C ratio varies widely by cell type: basaloid non-keratinizing cells show high N:C (≥0.7), whereas keratinized cells show low N:C (<0.3) with dense orangeophilic cytoplasm.",
+      "architecture_arrangement": "Dyscohesive keratinizing tadpole and spindle cells lie in tumor diathesis, separating them from bland flat squamous sheets."
+    }
+  },
+  {
+    "official_label": "respiratory tract-adenocarcinoma",
+    "user_label": "respiratory tract-adenocarcinoma",
+    "attrs": {
+      "cell_size_shape": "Cuboidal to columnar epithelial cells, 15-40 µm, have vacuolated or mucinous cytoplasm.",
+      "nuclear_size_shape": "Nuclei are enlarged, round to oval, 10-25 µm, sometimes eccentric and overlapping.",
+      "nuclear_membrane_contour": "Nuclear membranes are irregular or focally distorted, without ciliated terminal-bar polarity.",
+      "chromatin_nucleoli": "Chromatin is coarse or vesicular; prominent macronucleoli are frequent.",
+      "nc_ratio_cytoplasm": "N:C ratio is moderately increased, approximately 0.5-0.7, with intracytoplasmic mucin vacuoles or delicate glandular cytoplasm.",
+      "architecture_arrangement": "Tight 3D glandular clusters, acini, papillae, and intracytoplasmic mucin vacuoles replace ciliated strips or foamy macrophages."
+    }
+  },
+  {
+    "official_label": "respiratory tract-Small cell carcinoma",
+    "user_label": "respiratory tract-Small cell carcinoma",
+    "attrs": {
+      "cell_size_shape": "Small fragile blue cells, about 10-20 µm (roughly 2-3 times a mature lymphocyte), have scant almost invisible cytoplasm.",
+      "nuclear_size_shape": "Nuclei are about 10-20 µm, oval to elongated, and nearly fill the cell.",
+      "nuclear_membrane_contour": "Nuclear membranes are molded, angulated, and crushed against adjacent nuclei.",
+      "chromatin_nucleoli": "Chromatin is finely granular salt-and-pepper neuroendocrine type or smudged; nucleoli are absent or inconspicuous.",
+      "nc_ratio_cytoplasm": "N:C ratio is very high, >0.8, with scant fragile cytoplasm, prominent crush artifact, and nuclear streaking.",
+      "architecture_arrangement": "Numerous singly dispersed cells predominate, alternating with loosely cohesive aggregates and occasional rosettes; nuclear molding, apoptotic blue bodies, mitoses, and necrotic debris in the background are characteristic."
+    }
+  },
+  {
+    "official_label": "Serous effusion-Breast cancer",
+    "user_label": "Serous effusion-Breast cancer",
+    "attrs": {
+      "cell_size_shape": "Two predominant morphologic patterns: ductal carcinoma cells are small-to-medium polygonal 15-25 µm with moderate cytoplasm (morphologically indistinguishable from generic adenocarcinoma without IHC); lobular carcinoma cells are small dyscohesive 10-18 µm with scant cytoplasm and frequent signet-ring forms.",
+      "nuclear_size_shape": "Ductal nuclei mildly to moderately enlarged 10-15 µm; lobular nuclei small (8-12 µm), round, and notably uniform with relatively less pleomorphism than other adenocarcinomas.",
+      "nuclear_membrane_contour": "Ductal: slightly to moderately irregular; lobular: smooth to mildly irregular with characteristic uniformity.",
+      "chromatin_nucleoli": "Ductal: finely to moderately granular with small to moderately prominent nucleoli; lobular: fine to slightly coarse chromatin with inconspicuous nucleoli.",
+      "nc_ratio_cytoplasm": "N:C ratio is moderately increased, approximately 0.5-0.7; signet-ring forms have nucleus displaced peripherally by a single mucin vacuole.",
+      "architecture_arrangement": "Ductal pattern: 3D 'cannonball' clusters with smooth contours, occasional acini (morphologically often indistinguishable from generic adenocarcinoma - requires ER/PR/GATA3/GCDFP-15 IHC for confirmation); lobular pattern: characteristic single-file/Indian-file linear arrangements, dyscohesive single cells, and signet-ring cells (morphologically suggestive of breast origin); foreign cell population lacking mesothelial windows."
+    }
+  },
+  {
+    "official_label": "Serous effusion-Ovarian cancer",
+    "user_label": "Serous effusion-Ovarian cancer",
+    "attrs": {
+      "cell_size_shape": "Large epithelial cells, 20-40 µm, polygonal to cuboidal with moderate basophilic to vacuolated cytoplasm; high-grade serous carcinoma cells show marked size variation.",
+      "nuclear_size_shape": "Nuclei are markedly enlarged and pleomorphic, 12-25 µm, often with bizarre forms and 3+ fold size variation in HGSC.",
+      "nuclear_membrane_contour": "Nuclear membranes are markedly irregular, folded, or angulated, not smooth mesothelial rims.",
+      "chromatin_nucleoli": "Chromatin is coarse and vesicular; cherry-red macronucleoli are characteristic and frequent.",
+      "nc_ratio_cytoplasm": "N:C ratio is high, approximately 0.5-0.7, with moderate basophilic cytoplasm.",
+      "architecture_arrangement": "Large branching papillary fragments, 3D cell balls/spheres, and psammoma bodies (intracellular or stromal) form a distinctly foreign epithelial population lacking mesothelial intercellular windows; low-grade serous variants show smaller cells with hobnailed/scalloped cluster borders."
+    }
+  },
+  {
+    "official_label": "Serous effusion-adenocarcinoma",
+    "user_label": "Serous effusion-adenocarcinoma",
+    "attrs": {
+      "cell_size_shape": "Glandular epithelial cells, 15-50 µm, cuboidal, columnar, or signet-ring with mucinous, vacuolated, or dense cytoplasm; columnar morphology suggests GI/pancreaticobiliary, smaller round cells suggest lung.",
+      "nuclear_size_shape": "Nuclei are enlarged, eccentric, round to oval, 10-25 µm, with conspicuous anisonucleosis.",
+      "nuclear_membrane_contour": "Nuclear membranes are irregular, folded, or distorted by mucin vacuoles.",
+      "chromatin_nucleoli": "Chromatin is coarse or vesicular; nucleoli are prominent or macronucleolar.",
+      "nc_ratio_cytoplasm": "N:C ratio is moderately increased, approximately 0.5-0.7, despite vacuolated mucin-rich epithelial cytoplasm; signet-ring forms have nucleus pushed peripherally by a single large mucin vacuole.",
+      "architecture_arrangement": "Tight 3D clusters, acini, papillary clusters, signet-ring cells, and gland-in-gland 'cribriform' patterns form a foreign population without mesothelial windows; extracellular mucin background may be evident."
+    }
+  },
+  {
+    "official_label": "Thyroid gland-MTC",
+    "user_label": "Thyroid gland-MTC",
+    "attrs": {
+      "cell_size_shape": "Plasmacytoid, polygonal, round, or spindle-shaped cells are 15-30 µm with granular amphophilic cytoplasm; rare giant or bizarre forms may occur.",
+      "nuclear_size_shape": "Eccentric round to oval (or elongated in spindle forms) nuclei measure 8-15 µm; binucleation is common and multinucleation occurs less frequently.",
+      "nuclear_membrane_contour": "Nuclear membranes are smooth to mildly irregular; intranuclear pseudoinclusions (indistinguishable from those of PTC) may be identified in approximately 20-50% of cases, while nuclear grooves are rare or absent.",
+      "chromatin_nucleoli": "Chromatin is finely or coarsely granular salt-and-pepper neuroendocrine type; nucleoli are usually inconspicuous but can be prominent in some cells.",
+      "nc_ratio_cytoplasm": "N:C ratio is moderately increased, approximately 0.5-0.7, with variable granular cytoplasm; small red-purple azurophilic granules may be visible on Romanowsky-stained preparations.",
+      "architecture_arrangement": "Numerous dispersed single cells alternate with syncytium-like crowded aggregates, with occasional rosette/follicular/pseudopapillary arrangements; dense amorphous amyloid (mauve on Romanowsky, pale green to eosinophilic on Pap) is identified in roughly one-third to one-half of aspirates."
+    }
+  },
+  {
+    "official_label": "Thyroid gland-Malignant tumour",
+    "user_label": "Thyroid gland-Malignant tumour",
+    "attrs": {
+      "cell_size_shape": "Multiple coexisting entities with distinct hallmark features: PDTC = monomorphic small cells 10-20 µm with insular/trabecular/solid architecture; ATC = markedly pleomorphic 20-100 µm epithelioid + spindled + bizarre giant + osteoclast-like cells; thyroid SCC = keratinizing polygonal/tadpole/spindle 15-80 µm with orangeophilic cytoplasm; metastatic carcinoma = foreign epithelial population (lung adenocarcinoma columnar with mucin, RCC clear cells, melanoma pigmented, etc.); NHL = dyscohesive monomorphic 10-25 µm lymphoid cells with scant basophilic cytoplasm and lymphoglandular bodies in background.",
+      "nuclear_size_shape": "PDTC: small to mildly enlarged nuclei with focal atypia (key distinguishing feature - not uniform pleomorphism); ATC: bizarre giant nuclei >3 RBC diameters with extreme anisonucleosis; SCC: hyperchromatic pleomorphic nuclei; metastatic: depends on primary; NHL: round-to-irregular nuclei with open chromatin.",
+      "nuclear_membrane_contour": "Irregular, angulated, notched, or bizarre across entities; ATC may show multinucleated giant cells; residual PTC-like grooves possible in high-grade follicular-derived carcinoma.",
+      "chromatin_nucleoli": "Coarse/vesicular chromatin with macronucleoli common; ATC + SCC: frequent atypical mitoses; NHL: open chromatin with prominent nucleoli and lymphoglandular bodies.",
+      "nc_ratio_cytoplasm": "N:C ratio high (≥0.7) across most components with scant dense or fragile cytoplasm; SCC keratinized forms have lower N:C (<0.3) with dense orangeophilic cytoplasm.",
+      "architecture_arrangement": "Hallmark architectural patterns: PDTC = insular/trabecular/solid nests; ATC = dyscohesive bizarre cells + osteoclast-like giant cells + extensive necrosis; SCC = dyscohesive keratinizing aggregates in tumor diathesis; metastatic carcinoma = foreign cell population distinct from native follicular cells; NHL = dyscohesive monomorphic lymphoid cells with lymphoglandular bodies; necrosis, mitoses, and apoptosis are common across most components."
+    }
+  },
+  {
+    "official_label": "Thyroid gland-Suspicious for Malignancy",
+    "user_label": "Thyroid gland-Suspicious for Malignancy",
+    "attrs": {
+      "cell_size_shape": "Three subtype-specific patterns: SMTC = sparsely/moderately cellular sample with monomorphic small-to-medium-sized non-cohesive cells 12-25 µm with eccentrically located plasmacytoid nuclei; SMC (Suspicious for Metastasis) = scant foreign epithelial cells 15-35 µm not consistent with thyroid origin; SL (Suspicious for Lymphoma) = scattered atypical lymphoid cells with scant basophilic cytoplasm.",
+      "nuclear_size_shape": "SMTC: eccentrically located plasmacytoid nuclei 8-15 µm with rare INPIs and increased N:C; SMC: enlarged nuclei 10-25 µm with foreign-cell appearance; SL: enlarged lymphoid nuclei 10-18 µm with round-to-irregular contours.",
+      "nuclear_membrane_contour": "SMTC: smooth to mildly irregular; SMC: irregular depending on primary; SL: irregular lymphoid nuclear contours.",
+      "chromatin_nucleoli": "SMTC: smudgy chromatin due to suboptimal preservation, no discernible cytoplasmic granules; SMC: depends on primary; SL: open chromatin with scant basophilic cytoplasm.",
+      "nc_ratio_cytoplasm": "N:C ratio moderately to markedly increased (approximately 0.5-0.7) across subtypes, with scant cytoplasm; SMTC may show small amyloid-like fragments (colloid vs amyloid not distinguishable without ancillary studies); definitive diagnosis blocked by inadequate material for IHC/calcitonin washout/flow cytometry.",
+      "architecture_arrangement": "Findings are limited in quantity, quality, or preservation - definitive diagnosis blocked by inadequate material for confirmatory ancillary studies (calcitonin washout for MTC, IHC panels for metastasis, flow cytometry for lymphoma); the report should specify which subtype is suspected."
+    }
+  }
+]
