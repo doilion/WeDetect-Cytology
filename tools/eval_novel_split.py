@@ -9,8 +9,11 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
+
+import torch
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
@@ -55,6 +58,15 @@ def parse() -> argparse.Namespace:
         "--metrics-out", default=None,
         help="dump the eval metrics dict (runner.test() return) to this JSON path "
              "-> machine-readable novel per-class + bbox_mAP for offline analysis.")
+    p.add_argument(
+        "--organ-mask", default="data/texts/tct_ngc_class_organ_mask_novel_merged.pt",
+        help="novel organ mask applied at inference (keeps the organ prior, consistent "
+             "with base eval). The model carries the 30-class BASE mask from the config; "
+             "novel eval must swap it to the matching N-class mask. Auto-disabled if the "
+             "file is absent or its class count != the novel split.")
+    p.add_argument(
+        "--no-mask", action="store_true",
+        help="disable inference organ masking for the novel split (ablation / no-prior).")
     return p.parse_args()
 
 
@@ -196,6 +208,48 @@ def main() -> None:
     cfg.work_dir = args.work_dir
 
     runner = Runner.from_cfg(cfg)
+
+    # Organ mask: the model carries the 30-class BASE organ_class_mask (config
+    # organ_loss_mask=True), but novel eval has n_classes (e.g. 9) -> inference masking
+    # raises "organ_class_mask has 30 classes but cls_scores has N". Swap to the matching
+    # novel mask (keeps the organ prior, consistent with base eval) or --no-mask to disable.
+    _m = runner.model
+    _m = _m.module if hasattr(_m, "module") else _m
+    _head = getattr(_m, "bbox_head", None)
+    if (_head is not None and hasattr(_head, "set_organ_class_mask")
+            and getattr(_head, "organ_class_mask", None) is not None):
+        if args.no_mask:
+            _head.set_organ_class_mask(None)
+            print("[novel] organ mask DISABLED (--no-mask)")
+        elif args.organ_mask and os.path.exists(args.organ_mask):
+            _pkg = torch.load(args.organ_mask, weights_only=False, map_location="cpu")
+            _nmask = _pkg["mask"] if isinstance(_pkg, dict) else _pkg
+            # Align mask rows to the eval class order (else the organ prior masks the WRONG
+            # classes). Reorder by class_names when available; disable if it can't be aligned.
+            _names = list(_pkg["class_names"]) if isinstance(_pkg, dict) and "class_names" in _pkg else None
+            if _names is not None and _names != list(classes):
+                _idx = {nm: i for i, nm in enumerate(_names)}
+                if all(c in _idx for c in classes):
+                    _nmask = _nmask[[_idx[c] for c in classes]]
+                    print("[novel] reordered organ mask rows to match the eval class order")
+                else:
+                    print("[novel][warn] organ mask class_names != eval classes (not a "
+                          "permutation) -> masking DISABLED")
+                    _nmask = None
+            if _nmask is None:
+                _head.set_organ_class_mask(None)
+            elif _nmask.shape[0] != n_classes:
+                print(f"[novel][warn] organ mask {args.organ_mask} has {_nmask.shape[0]} "
+                      f"classes but novel split has {n_classes} -> masking DISABLED")
+                _head.set_organ_class_mask(None)
+            else:
+                _head.set_organ_class_mask(_nmask)
+                print(f"[novel] organ mask -> {args.organ_mask} {tuple(_nmask.shape)} "
+                      "(organ prior ON, rows aligned to eval class order)")
+        else:
+            print(f"[novel] no novel organ mask at {args.organ_mask} -> masking DISABLED")
+            _head.set_organ_class_mask(None)
+
     metrics = runner.test()
     if args.metrics_out:
         out = Path(args.metrics_out)
