@@ -99,6 +99,10 @@ def main() -> None:
         )
 
     cfg = Config.fromfile(args.config)
+    # Single-process eval: a config dumped from DDP training carries launcher='pytorch',
+    # which makes Runner.from_cfg call init_dist and crash with KeyError('RANK') when run
+    # as a plain `python` process (no torchrun).
+    cfg.launcher = 'none'
     cfg.load_from = resolve_latest_checkpoint(args.checkpoint, cfg.work_dir)
     # At eval, load_from is the trained ckpt and must load fully -> drop train-only
     # hooks that would strip backbone.image_model.* (DINOv3 ViT-Det pyramid / LoRA).
