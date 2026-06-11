@@ -37,7 +37,18 @@ def parse() -> argparse.Namespace:
     p.add_argument("--ann-file", required=True,
                    help="relative to --data-root, e.g. annotations/instances_test_main_novel.json")
     p.add_argument("--text-json", required=True)
-    p.add_argument("--text-emb", required=True)
+    p.add_argument("--text-emb", default=None,
+                   help="novel per-class flat text emb (PseudoLanguageBackbone arms). "
+                        "Required UNLESS --class-metadata is given (multi-attr arms).")
+    p.add_argument(
+        "--class-metadata", default=None,
+        help="MULTI-ATTRIBUTE backbone novel eval (PseudoMultiAttrLanguageBackbone, "
+        "i.e. the ICF/attr arms whose text_model has class_metadata_path): path to the "
+        "novel per-attribute metadata .pt (e.g. tct_ngc_class_metadata_novel_merged_morph6.pt, "
+        "same dict structure as base: class_names/organ_ids/attr_emb[C,A,D]). The backbone "
+        "TYPE + pool_mode + adapter are kept as trained and only class_metadata_path is "
+        "repointed -> the multi-attribute structure survives. Replacing such a backbone with "
+        "a flat text_embed (the --text-emb path) instead collapses novel mAP to ~0.")
     p.add_argument(
         "--attr-text",
         default=None,
@@ -134,14 +145,38 @@ def main() -> None:
     # applying to the swapped-in novel text, or novel eval would silently use the
     # un-aligned raw text. PseudoLanguageBackbone re-runs the adapter each forward
     # when text_adapter is set, so the novel cached vectors get the learned alignment.
-    _orig_adapter = cfg.model.backbone.text_model.get("text_adapter")
-    _new_text_model = dict(
-        type="PseudoLanguageBackbone",
-        text_embed_path=args.text_emb,
-    )
-    if _orig_adapter is not None:
-        _new_text_model["text_adapter"] = _orig_adapter
-    cfg.model.backbone.text_model = _new_text_model
+    # Two backbone families need different handling:
+    #  (b) PseudoMultiAttrLanguageBackbone (the ICF / multi-attribute arms): the
+    #      model classifies from per-class PER-ATTRIBUTE metadata (attr_emb[C,A,D]),
+    #      NOT a flat per-class vector. Replacing it with a flat PseudoLanguageBackbone
+    #      drops the multi-attribute structure it was trained on -> novel mAP -> ~0.
+    #      Keep the backbone TYPE + pool_mode + adapter and only repoint
+    #      class_metadata_path at the novel per-attribute metadata.
+    #  (a) everything else (flat PseudoLanguageBackbone, relational arms): full
+    #      replacement with a flat PseudoLanguageBackbone backed by --text-emb.
+    _tm = cfg.model.backbone.text_model
+    if _tm.get("class_metadata_path") is not None:
+        if not args.class_metadata:
+            raise SystemExit(
+                f"text_model {_tm.get('type')!r} is metadata-driven "
+                f"(class_metadata_path is set) -> pass --class-metadata <novel "
+                f"per-attribute metadata .pt>. Replacing it with a flat --text-emb "
+                f"backbone collapses novel mAP to ~0 (the multi-attribute structure "
+                f"is lost)."
+            )
+        _tm["class_metadata_path"] = args.class_metadata  # keep type/pool_mode/adapter
+    else:
+        if not args.text_emb:
+            raise SystemExit("--text-emb is required for flat-text backbones "
+                             "(no class_metadata_path on this text_model).")
+        _orig_adapter = _tm.get("text_adapter")
+        _new_text_model = dict(
+            type="PseudoLanguageBackbone",
+            text_embed_path=args.text_emb,
+        )
+        if _orig_adapter is not None:
+            _new_text_model["text_adapter"] = _orig_adapter
+        cfg.model.backbone.text_model = _new_text_model
 
     # 1b) ATTRIBUTE method: the attribute head classifies from its OWN per-attr
     # text buffer (head.attr_fusion.attr_text_path), NOT the backbone txt_feats
