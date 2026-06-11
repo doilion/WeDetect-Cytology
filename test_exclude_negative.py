@@ -94,6 +94,10 @@ def main():
 
     # Load config
     cfg = Config.fromfile(args.config)
+    # Single-process eval: a config dumped from DDP training carries
+    # launcher='pytorch', which makes Runner.from_cfg call init_dist and crash
+    # with KeyError('RANK') when run as a plain `python` process (no torchrun).
+    cfg.launcher = 'none'
 
     # Set checkpoint
     cfg.load_from = resolve_latest_checkpoint(args.checkpoint, cfg.work_dir)
