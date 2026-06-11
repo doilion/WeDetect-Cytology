@@ -113,6 +113,12 @@ declare -A CFG=(
 # that to the 9-class novel per-attr cache (--attr-text); backbone novel text is ignored there.
 declare -A ATTR_ARM=( [attr_mean]=1 [attr]=1 [attr_b5]=1 [stitch]=1 [stitchb]=1 )
 
+# Base eval on the held-out TEST split (test_base_clean), NOT the config-default val split.
+# The configs' test_dataloader points at val_dev_disjoint (used for checkpoint selection);
+# without this the base headline would be a VAL number while novel is on TEST -> inconsistent,
+# and VAL runs ~5pp below TEST so @1024 wrongly looks worse than @640. Paper protocol = TEST.
+BASE_ANN="${BASE_ANN:-annotations/instances_test_base_clean_dev30.json}"
+
 # Novel zero-shot assets (9 classes, instances_test_novel_merged_9.json, cat 0-8).
 NOVEL_ANN="annotations/instances_test_novel_merged_9.json"
 NOVEL_TEXT_JSON="data/texts/tct_ngc_novel_merged_9.json"               # PSC prompts (backbone)
@@ -206,9 +212,10 @@ train_eval_one() {
     if [ -z "$ckpt" ]; then log "[eval-skip] $name: no checkpoint in $wd";
       write_bundle_meta "$name" "$cfg" "$wd" "$b" "$eff" "$lr" ""; return; fi
 
-    log "[eval ] $name base (organ-macro + per-class + exclude-neg) @ $(basename "$ckpt")"
+    log "[eval ] $name base (TEST split, organ-macro + per-class + exclude-neg) @ $(basename "$ckpt")"
     CUDA_VISIBLE_DEVICES="$g" PYTHONPATH=. "$PYBIN" test_exclude_negative.py \
       --config "$cfg" --checkpoint "$ckpt" --metric organ \
+      --data-root "$DATA_ROOT_1024" --ann-file "$BASE_ANN" \
       --metrics-out "$bdir/base_metrics.json" 2>&1 | tee "logs/${name}_${STAMP}.eval_base.log"
     [ "${PIPESTATUS[0]}" -ne 0 ] && log "[FAIL ] $name base eval exited non-zero"
 
